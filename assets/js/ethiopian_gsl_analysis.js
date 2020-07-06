@@ -8,8 +8,6 @@ function updateObject(obj, key, val) {
     }
 }
 
-d3.csv("/assets/stats/all.csv").then(allSingersPlot);
-
 function plot(words, counts, chart) {
     ctx = document.getElementById(chart).getContext("2d");
     wc = [words, counts];
@@ -55,8 +53,6 @@ function allSingersPlot(allData) {
 
     plot(words, counts, "allChart");
 }
-
-d3.csv("/assets/stats/all_per_year.csv").then(allSingersPerYearPlot);
 
 function allSingersPerYearPlot(allYearlyData) {
     lookup = {};
@@ -107,4 +103,9 @@ function allSingersPerYearPlot(allYearlyData) {
             );
         },
     });
+}
+
+if (window.location.pathname === "/zekarias/blog.html") {
+    d3.csv("/assets/stats/all.csv").then(allSingersPlot);
+    d3.csv("/assets/stats/all_per_year.csv").then(allSingersPerYearPlot);
 }
