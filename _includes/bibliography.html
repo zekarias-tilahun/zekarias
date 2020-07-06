@@ -1,0 +1,137 @@
+{% assign sortedBib = site.data.bibliography | sort: "id" | reverse %} {% for
+bib_item in sortedBib %}
+<div class="card text-left mb-3">
+    <div class="card-body">
+        <h6 class="card-title">
+            {{ bib_item.header }}
+            <span class="badge badge-primary float-right"
+                >{{ bib_item.tag }}</span
+            >
+        </h6>
+
+        <p class="card-text">
+            {{ bib_item.authors }}. {{ bib_item.title }}. {% if
+            bib_item.booktitle And bib_item.booktitle != "" And
+            bib_item.booktitle != nil %} {{ bib_item.booktitle }}, {% endif %}
+            {% if bib_item.series And bib_item.series != "" And bib_item.series
+            != nil %} {{ bib_item.series }}, {% endif %} {% if bib_item.journal
+            And bib_item.journal != "" And bib_item.journal != nil %} {{
+            bib_item.journal }} Journal, {% endif %} {{ bib_item.publisher }}.
+            {{ bib_item.month }} {{ bib_item.year }}
+        </p>
+
+        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        <ul class="nav nav-tabs">
+            {% if bib_item.abstract %}
+            <li class="nav-item">
+                <a
+                    class="nav-link"
+                    data-toggle="collapse"
+                    href="#panel-abs-{{ bib_item.id }}"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="panel-abs-{{ bib_item.id }}"
+                    id="tab-abs-{{ bib_item.id }}"
+                    onclick="manageAPublicationTab('abstract', '{{ bib_item.id }}')"
+                    >Abstract</a
+                >
+            </li>
+            {% endif %}
+            <li class="nav-item">
+                <a
+                    class="nav-link"
+                    data-toggle="collapse"
+                    href="#panel-bibtex-{{ bib_item.id }}"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="panel-bibtex-{{ bib_item.id }}"
+                    id="tab-bib-{{ bib_item.id }}"
+                    onclick="manageAPublicationTab('bibtex', '{{ bib_item.id }}')"
+                    >Bib</a
+                >
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ bib_item.url }}">PDF</a>
+            </li>
+            {% if bib_item.source %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ bib_item.source }}">CODE</a>
+            </li>
+            {% endif %}
+        </ul>
+        <div class="collapse" id="panel-abs-{{ bib_item.id }}">
+            <!-- <div class="card-body text-justify bg-info">
+                
+                </div> -->
+            <div class="alert bg-info text-white text-justify" role="alert">
+                <!-- <h4 class="alert-heading">Well done!</h4> -->
+                <p>{{ bib_item.abstract }}</p>
+                <!-- <hr>
+                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p> -->
+            </div>
+        </div>
+
+        <div class="collapse" id="panel-bibtex-{{ bib_item.id }}">
+            <!-- DO NOT -->
+            <!-- DO NOT -->
+            <!-- DO NOT -->
+            <!-- DO NOT FORMAT THE FOLLOWING LIQUID HIGHLIGHT, AS IT IS WHITE SPACE SENSITIVE -->
+            <pre
+                class="bg-dark text-white"
+                style="width: 100%; white-space: pre-wrap;"
+                id="pre-{{ bib_item.id }}"
+            >
+    @inproceedings{
+        {{ bib_item.key }},
+        title="{{ bib_item.title }}",
+        author="{{ bib_item.authors }}",
+        {% if bib_item.booktitle -%}
+        booktitle="{{ bib_item.booktitle }}",
+        {% endif %}
+        {%- if bib_item.year -%}
+        year="{{ bib_item.year }}",
+        {% endif %}
+        {%- if bib_item.month -%}
+        month="{{ bib_item.month }}",
+        {% endif %}
+        {%- if bib_item.url -%}
+        url="{{ bib_item.url }}",
+        {% endif %}
+        {%- if bib_item.series -%}
+        series="{{ bib_item.series }}",
+        {% endif %}
+        {%- if bib_item.journal -%}
+        journal="{{ bib_item.journal }}",
+        {% endif %}
+        {%- if bib_item.publisher -%}
+        publisher="{{ bib_item.publisher }}",
+        {% endif %}
+        {%- if bib_item.doi -%}
+        doi="{{ bib_item.doi }}",
+        {%- endif %}
+    }
+</pre
+            >
+            <textarea
+                style="
+                    opacity: 0.01;
+                    height: 0;
+                    position: absolute;
+                    z-index: -1;
+                "
+                id="txt-{{ bib_item.id }}"
+            ></textarea>
+            <button
+                type="button"
+                class="btn btn-primary btn-sm btn-block"
+                onclick="copyBibtexClipBoard('{{ bib_item.id }}')"
+                id="btn-{{ bib_item.id }}"
+            >
+                Copy to clipboard
+            </button>
+            <p id="copy-notification-{{ bib_item.id }}" role="alert"></p>
+            <div></div>
+        </div>
+    </div>
+</div>
+{% endfor %}

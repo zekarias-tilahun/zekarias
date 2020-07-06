@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/app.scss"
+	],
+	"sourcesContent": [
+		"@import \"app\";",
+		".social-icon {\n    margin-left: 7px;\n}\n.social-icon.twitter {\n    color: #00aced;\n}\n.social-icon.github {\n    color: #000000;\n}\n.social-icon.linkedin {\n    color: #007bb6;\n}\n.social-icon.orcid {\n    color: #a6ce39;\n}\n.social-icon.google-scholar {\n    color: #4788ee;\n}\n"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,YAAY,CAAC,EACT,WAAW,EAAE,GAAG,GACnB;;AACD,AAAA,YAAY,AAAA,QAAQ,CAAC,EACjB,KAAK,EAAE,OAAO,GACjB;;AACD,AAAA,YAAY,AAAA,OAAO,CAAC,EAChB,KAAK,EAAE,OAAO,GACjB;;AACD,AAAA,YAAY,AAAA,SAAS,CAAC,EAClB,KAAK,EAAE,OAAO,GACjB;;AACD,AAAA,YAAY,AAAA,MAAM,CAAC,EACf,KAAK,EAAE,OAAO,GACjB;;AACD,AAAA,YAAY,AAAA,eAAe,CAAC,EACxB,KAAK,EAAE,OAAO,GACjB"
+}
