@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: Bio
+title: Zekarias Tilahun Kefato
 ---
 
 <p class="text-justify">
@@ -22,7 +22,20 @@ title: Bio
     <ol>
         <li>
             <p>
-                PC Member: The Fourth International Conference on Machine
+                Reviewer: 
+                <a href="https://www.journals.elsevier.com/neurocomputing">Neurocomputing</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                PC Member: The Seventh IEEE International Conference on Social
+                Networks Analysis, Management and Security
+                <a href="https://emergingtechnet.org/SNAMS2020/">SNAMS'20</a>
+            </p>
+        </li>
+        <li>
+            <p>
+                PC Member: The Sixth International Conference on Machine
                 Learning, Optimization, and Data Science,
                 <a href="https://lod2020.icas.xyz/">LOD'20</a>
             </p>
