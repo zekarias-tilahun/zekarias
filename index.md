@@ -4,18 +4,14 @@ title: Bio
 ---
 
 <p class="text-justify">
-    Zekarias is a postdoc in Decentralized Machine Learning. Before, he did his
-    PhD in Computer Science with a Machine Learning specialization and he had
-    the previledge to work under the supervision of
-    <a href="http://cricca.disi.unitn.it/montresor/">Prof. Montresor</a>. He is
-    generally interested in Machine Learning, Natural Language Processing, and
-    Social Network Analysis. His PhD research was mainly on Graph Embedding (aka
-    - Graph Representation Learning) and Information Diffusion Analysis. More
-    concretely, he has explored how we can use data from information diffusion
-    events and node attributes in order to learn high-quality embedding of
-    nodes. This is particularly useful in cases where the network under
-    consideration is noisy. For example when it has missing information, such as
-    social links between nodes.
+    I am a postdoc in Machine Learning. Before, I did my
+    PhD in Computer Science with a Machine Learning specialization under the supervision of
+    <a href="http://cricca.disi.unitn.it/montresor/">Prof. Montresor</a>. 
+    Generally, I'm interested in Machine Learning, Graph Analytics, and Natural Language Processing, 
+    and pay particular attention to Graph-based Machine Learning.
+    Currently, I'm working on Graph Embedding (aka - Graph Representation Learning - GRL), a continuation 
+    from my PhD, and cover topics such as, Graph Neural Networks (GNNs), Contextualized GRL, 
+    and self-supervised GNNs.
 </p>
 
 <header>
