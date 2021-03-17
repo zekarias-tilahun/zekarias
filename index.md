@@ -123,6 +123,6 @@ title: Zekarias Tilahun Kefato
 <div>
     <p class="text-justify">
         Fore more details, checkout my
-        <a href="cv/ZekariasTK_General_long.pdf">CV</a>
+        <a href="https://github.com/zekarias-tilahun/Documents/blob/main/cv/CV_Microsoft.pdf">CV</a>
     </p>
 </div>
