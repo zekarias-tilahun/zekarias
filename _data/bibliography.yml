@@ -7,7 +7,7 @@
   year: 2021
   url: https://arxiv.org/abs/2011.05208
   tag: Conference
-  booktitle: In Proceedings of the Web Conference 2021 (WWW ’21)
+  booktitle: In Proceedings of the Web Conference 2021
   series: WWW'21
   abstract:
       In recommender systems (RSs), predicting the next item that a user interacts with is critical for user retention. While the last decade has seen an explosion of 
