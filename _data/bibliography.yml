@@ -1,5 +1,5 @@
 - name: deepred
-  id: 12
+  id: 13
   key: kefato2021dynamic
   title: "Dynamic Embeddings for Interaction Prediction"
   header: "Dynamic Embeddings for Interaction Prediction"
@@ -22,6 +22,36 @@
       Although this study is mainly concerned with temporal interaction networks, we also show the power and flexibility of DeePRed by adapting it to the case of static 
       interaction networks, substituting the short- and long-term aspects with local and global ones.
   source: https://github.com/zekarias-tilahun/deepred
+@misc{kefato2021selfsupervised,
+      title={}, 
+      author={Zekarias T. Kefato and Sarunas Girdzijauskas},
+      year={2021},
+      eprint={2103.14958},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+- name: selfgnn
+  id: 12
+  key: kefato2021selfsupervised
+  title: "Self-supervised Graph Neural Networks without explicit negative sampling"
+  header: "Self-supervised Graph Neural Networks without explicit negative sampling"
+  authors: Zekarias T. Kefato, Sarunas Girdzijauskas
+  year: 2021
+  url: https://arxiv.org/abs/2103.14958
+  tag: Workshop
+  booktitle: The International Workshop on Self-Supervised Learning for the Web (SSL'21) 
+  series: @WWW'21
+  abstract:
+      Real world data is mostly unlabeled or only few instances are labeled. Manually labeling data is a very expensive and daunting task. 
+      This calls for unsupervised learning techniques that are powerful enough to achieve comparable results as semi-supervised/supervised techniques. 
+      Contrastive self-supervised learning has emerged as a powerful direction, in some cases outperforming supervised techniques. In this study, we propose, 
+      SelfGNN, a novel contrastive self-supervised graph neural network (GNN) without relying on explicit contrastive terms. 
+      We leverage Batch Normalization, which introduces implicit contrastive terms, without sacrificing performance. 
+      Furthermore, as data augmentation is key in contrastive learning, we introduce four feature augmentation (FA) techniques for graphs. 
+      Though graph topological augmentation (TA) is commonly used, our empirical findings show that FA perform as good as TA. 
+      Moreover, FA incurs no computational overhead, unlike TA, which often has O(N^3) time complexity, N-number of nodes. 
+      Our empirical evaluation on seven publicly available real-world data shows that, SelfGNN is powerful and leads to a performance comparable with SOTA 
+      supervised GNNs and always better than SOTA semi-supervised and unsupervised GNNs. 
 - name: goat
   id: 11
   key: kefato2020gossip
