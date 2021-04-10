@@ -22,6 +22,7 @@
       Although this study is mainly concerned with temporal interaction networks, we also show the power and flexibility of DeePRed by adapting it to the case of static
       interaction networks, substituting the short- and long-term aspects with local and global ones.
   source: https://github.com/zekarias-tilahun/deepred
+  video: https://www.youtube.com/watch?v=C_4j4KOVlj4
 - name: selfgnn
   id: 12
   key: kefato2021selfsupervised
@@ -44,6 +45,7 @@
       Moreover, FA incurs no computational overhead, unlike TA, which often has O(N^3) time complexity, N-number of nodes.
       Our empirical evaluation on seven publicly available real-world data shows that, SelfGNN is powerful and leads to a performance comparable with SOTA
       supervised GNNs and always better than SOTA semi-supervised and unsupervised GNNs.
+  source: https://github.com/zekarias-tilahun/SelfGNN
 - name: goat
   id: 11
   key: kefato2020gossip

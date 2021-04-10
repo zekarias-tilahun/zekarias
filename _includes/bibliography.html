@@ -57,6 +57,10 @@ bib_item in sortedBib %}
             <li class="nav-item">
                 <a class="nav-link" href="{{ bib_item.source }}">CODE</a>
             </li>
+            {% endif %} {% if bib_item.video %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ bib_item.video }}">Talk</a>
+            </li>
             {% endif %}
         </ul>
         <div class="collapse" id="panel-abs-{{ bib_item.id }}">
@@ -78,7 +82,7 @@ bib_item in sortedBib %}
             <!-- DO NOT FORMAT THE FOLLOWING LIQUID HIGHLIGHT, AS IT IS WHITE SPACE SENSITIVE -->
             <pre
                 class="bg-dark text-white"
-                style="width: 100%; white-space: pre-wrap;"
+                style="width: 100%; white-space: pre-wrap"
                 id="pre-{{ bib_item.id }}"
             >
     @inproceedings{
